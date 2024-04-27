@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Quiz Sign in</title>
+
+   <!-- Favicons -->
+  <link href="assets/img/" rel="icon" type="image/x-icon" >
+
+   <!-- Google Fonts -->
+   <link rel="stylesheet" href="/quiz-frontend/assets/css/fonts.css">
+
+   <!-- css Files -->
+   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="assets/css/media.css">
+</head>
+<body>
+
+   <div class="admin_singin_portal">
+      <div class="signin_container">
+        <div class="singin_wrapper col-lg-6 col-12">
+          <div class="form_wrapper" id="SignIn_form">
+            <form action="">
+              <div class="form_header">
+                <h3 class="form_title">Sign In</h3>
+                <span class="form_sub_title">Sign in With QR code</span>
+              </div>
+              <div class="row">
+                <div class="col-sm-6 col-12 pe-sm-1">
+                  <a href="javascript:void(0)" class="singin_link">
+                    <img src="assets/images/google-icon.svg" alt="google" />
+                    Sign in with Google
+                  </a>
+                </div>
+                <div class="col-sm-6 col-12 ps-sm-1">
+                  <a href="javascript:void(0)" class="singin_link">
+                    <img src="assets/images/apple-black.svg" alt="apple" />
+                    Sign in with Apple
+                  </a>
+                </div>
+              </div>
+              <div class="form_divider">
+                <span>Or with email</span>
+              </div>
+              <div class="row">
+                <div class="col-12 form-group">
+                  <input type="email" placeholder="Email" class="form-input" />
+                </div>
+                <div class="col-12 form-group">
+                  <input type="password" placeholder="Password" class="form-input" />
+                  <a href="" class="forgot-pass-link">Forgot Password ?</a>
+                </div>
+                <div class="col-12 form-group">
+                  <button type="button" class="btn btn-primary btn-submit w-100" data-bs-toggle="modal"
+                    data-bs-target="#successModal">Sign In</button>
+                </div>
+                <div class="col-12">
+                  <h6 class="to_be_member_link">Not a Member yet? <a href="">Sign up</a></h6>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="form_wrapper d-none" id="SignUp_form">
+            <form action="">
+              <div class="form_header">
+                <h3 class="form_title">Sign Up</h3>
+                <span class="form_sub_title">Your Social Campaigns</span>
+              </div>
+              <div class="row">
+                <div class="col-sm-6 col-12 pe-sm-1">
+                  <a href="javascript:void(0)" class="singin_link">
+                    <img src="../images/google-icon.svg" alt="" />
+                    Sign in with Google
+                  </a>
+                </div>
+                <div class="col-sm-6 col-12 ps-sm-1">
+                  <a href="javascript:void(0)" class="singin_link">
+                    <img src="../images/apple-black.svg" alt="" />
+                    Sign in with Apple
+                  </a>
+                </div>
+              </div>
+              <div class="form_divider">
+                <span>Or with email</span>
+              </div>
+              <div class="row">
+                <div class="col-12 form-group">
+                  <input type="email" placeholder="Email" class="form-input" />
+                </div>
+                <div class="col-12 form-group">
+                  <input type="password" placeholder="Password" class="form-input" />
+                </div>
+                <div class="col-12 form-group">
+                  <input type="password" placeholder="Repeat Password" class="form-input" />
+                </div>
+                <div class="col-12 form-group">
+                  <div class="custom_checkbox">
+                    <input type="checkbox" />
+                    <p>I Agree & <a href="javascript:void(0)">Terms and conditions.</a></p>
+                  </div>
+                </div>
+                <div class="col-12 form-group">
+                  <button type="button" class="btn btn-primary w-100">Sign Up</button>
+                </div>
+                <div class="col-12">
+                  <h6 class="to_be_member_link">Already have an Account? <a href="">Sign in</a></h6>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="form_wrapper d-none" id="Forgot_password">
+            <form action="">
+              <div class="form_header">
+                <h3 class="form_title">Forgot Password ?</h3>
+                <span class="form_sub_title">Enter your email to reset your password.</span>
+              </div>
+              <div class="row">
+                <div class="col-12 form-group">
+                  <input type="email" placeholder="Email" class="form-input" />
+                </div>
+                <div class="col-12 form-group text-center">
+                  <button type="button" class="btn btn-primary me-1">Submit</button>
+                  <button type="button" class="btn btn-secondary ms-1">Back</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="form_wrapper d-none" id="reset_password">
+            <form action="">
+              <div class="form_header">
+                <h3 class="form_title">Setup New Password</h3>
+                <span class="form_sub_title">Have you already reset the password ? <a href="javascript:void(0)">Sign
+                    in</a></span>
+              </div>
+              <div class="row">
+                <div class="col-12 form-group">
+                  <input type="password" placeholder="Password" class="form-input" />
+                </div>
+                <div class="col-12 form-group">
+                  <input type="password" placeholder="Repeat Password" class="form-input" />
+                </div>
+                <div class="col-12 form-group">
+                  <div class="custom_checkbox">
+                    <input type="checkbox" />
+                    <p>I Agree & <a href="javascript:void(0)">Terms and conditions.</a></p>
+                  </div>
+                </div>
+                <div class="col-12 form-group">
+                  <button type="button" class="btn btn-primary w-100" data-bs-toggle="modal"
+                    data-bs-target="#errorModal">Submit</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="singin_wrapper signin_image_container col-lg-6 col-12">
+          <div class="about_company_detail">
+            <div class="auth_logo">
+              <img src="images/logo.svg" alt="">
+            </div>
+            <div class="auth_detail_image">
+              <img src="images/Dashboard.png" alt="">
+            </div>
+            <div class="auth_detail">
+              <h4>Fast, Efficient and Productive</h4>
+              <p>In this kind of post, the bloggerintroduces a person they’ve interviewed
+                and provides some background information about the intervieweeand their
+                work following this is a transcript of the interview.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+   <!-- Script -->
+   <script src="assets/js/jquery-3.6.0.min.js"></script>
+   <script src="assets/js/bootstrap.min.js"></script>
+   <script src="assets/js/popper.min.js"></script>
+   <script src="assets/js/script.js"></script>
+
+</body>
+</html>
