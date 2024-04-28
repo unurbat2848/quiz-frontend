@@ -1,0 +1,30 @@
+@media screen and (max-width: 1200px) {
+  p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .auth_detail {
+    max-width: 70%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .admin_singin_portal .signin_container {
+    flex-direction: column-reverse;
+    flex: 0;
+  }
+
+  .auth_detail {
+    display: none;
+  }
+
+  .auth_detail_image {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 991px) {
+ 
+}
