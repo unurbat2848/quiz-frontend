@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Quiz Sign in</title>
+
+   <!-- Favicons -->
+  <link href="assets/img/" rel="icon" type="image/x-icon" >
+
+   <!-- Google Fonts -->
+   <link rel="stylesheet" href="assets/css/fonts.css">
+
+   <!-- css Files -->
+   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="assets/css/media.css">
+</head>
+<body>
+
+   <div class="admin_singin_portal">
+      <div class="signin_container">
+        <div class="singin_wrapper col-lg-6 col-12">
+          <div class="form_wrapper" id="SignIn_form">
+            <form action="">
+              <div class="form_header">
+                <h3 class="form_title">Sign In</h3>
+              </div>
+              <div class="row">
+                <div class="col-12 form-group">
+                  <input type="email" placeholder="Email" class="form-input" />
+                </div>
+                <div class="col-12 form-group mb-3">
+                  <input type="password" placeholder="Password" class="form-input" />
+                  <a href="#" class="forgot-pass-link ">Forgot Password ?</a>
+                  <a type="button" class="sign_in_qr text-decoration-none" data-bs-toggle="modal" data-bs-target="#signqrmodal">Sign in With QR code</a>
+                </div>
+                <div class="col-12 form-group">
+                  <button type="button" class="btn btn-primary btn-submit w-100" data-bs-toggle="modal"
+                    data-bs-target="#successModal">Sign In</button>
+                </div>
+                <div class="col-12">
+                  <h6 class="to_be_member_link">Not a Member yet? <a href="">Sign up</a></h6>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="singin_wrapper signin_image_container col-lg-6 col-12">
+          <div class="about_company_detail">
+            <div class="auth_logo">
+              <h2 class="text-white mb-3">QUIZ"em</h2>
+              <!-- logo remaining -->
+              <!-- <img src="images/logo.svg" alt="logo"> -->
+            </div>
+            <!-- <div class="auth_detail_image">
+              <img src="images/Dashboard.png" alt="">
+            </div> -->
+            <div class="auth_detail">
+              <h4>Fast, Efficient and Productive</h4>
+              <p>In this kind of post, the bloggerintroduces a person they’ve interviewed
+                and provides some background information about the intervieweeand their
+                work following this is a transcript of the interview.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Qr code modal -->
+    <div class="modal fade qr_modal" id="signqrmodal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            Scan QR code
+          </div>
+          <div class="modal-body">
+            <div class="qr_block text-center">
+              <img src="Assets/images/qr-code.png" alt="qr-code">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Back</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+   <!-- Script -->
+   <script src="assets/js/jquery-3.6.0.min.js"></script>
+   <script src="assets/js/bootstrap.min.js"></script>
+   <script src="assets/js/popper.min.js"></script>
+   <script src="assets/js/script.js"></script>
+
+</body>
+</html>
