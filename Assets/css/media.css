@@ -4,14 +4,8 @@
   }
 }
 
-@media screen and (max-width: 1199px) {
-  .auth_detail {
-    max-width: 70%;
-  }
-}
-
 @media screen and (max-width: 991px) {
-  .admin_singin_portal .signin_container {
+  .admin_sign_portal .sign_container {
     flex-direction: column-reverse;
     flex: 0;
   }
@@ -23,8 +17,4 @@
   .auth_detail_image {
     display: none;
   }
-}
-
-@media screen and (max-width: 991px) {
- 
 }

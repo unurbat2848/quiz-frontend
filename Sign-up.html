@@ -20,12 +20,10 @@
 
 <body>
 
-  <div class="admin_sign_portal">
-    <div class="sign_container">
-      <div class="sign_wrapper col-lg-6 col-12">
-
-        <!-- signin_form -->
-        <div class="form_wrapper" id="signin_form">
+  <div class="admin_singin_portal">
+    <div class="signin_container">
+      <div class="singin_wrapper col-lg-6 col-12">
+        <div class="form_wrapper" id="SignIn_form">
           <form action="">
             <div class="form_header">
               <h3 class="form_title">Sign In</h3>
@@ -39,56 +37,23 @@
                 <a href="#" class="forgot-pass-link" data-bs-toggle="modal" data-bs-target="#forgot_login_modal">Forgot
                   Password ?</a>
                 <a type="button" class="sign_in_qr text-decoration-none" data-bs-toggle="modal"
-                  data-bs-target="#signqrmodal">Use Your Game Code or Scan QR Code</a>
+                  data-bs-target="#signqrmodal">Sign in With QR code</a>
               </div>
               <div class="col-12 form-group">
                 <button type="button" class="btn btn-primary btn-submit w-100" data-bs-toggle="modal"
                   data-bs-target="#successModal">Sign In</button>
               </div>
               <div class="col-12">
-                <h6 class="to_be_member_link">Not a Member yet? <a href="javascript:void(0)" id="sign_up_link">Sign up</a></h6>
-              </div>
-            </div>
-          </form>
-        </div>
-
-        <!-- signup_form -->
-        <div class="form_wrapper d-none" id="signup_form">
-          <form action="">
-            <div class="form_header">
-              <h3 class="form_title">Sign Up</h3>
-            </div>
-            <div class="row">
-              <div class="col-12 form-group">
-                <input type="text" placeholder="First Name" class="form-input" />
-              </div>
-              <div class="col-12 form-group">
-                <input type="text" placeholder="Last Name" class="form-input" />
-              </div>
-              <div class="col-12 form-group">
-                <input type="email" placeholder="Email" class="form-input" />
-              </div>
-              <div class="col-12 form-group">
-                <input type="password" placeholder="Password" class="form-input" />
-              </div>
-              <div class="col-12 form-group">
-                <input type="password" placeholder="confirm-password" class="form-input" />
-              </div>
-              <div class="col-12 form-group">
-                <button type="button" class="btn btn-primary btn-submit w-100">Sign Up</button>
-              </div>
-              <div class="col-12">
-                <h6 class="to_be_member_link">Already a Member of Quiz'em ? <a href="javascript:void(0)" id="sign_in_link">Sign In here</a></h6>
+                <h6 class="to_be_member_link">Not a Member yet? <a href="">Sign up</a></h6>
               </div>
             </div>
           </form>
         </div>
       </div>
-
-      <div class="sign_wrapper sign_image_container col-lg-6 col-12">
+      <div class="singin_wrapper signin_image_container col-lg-6 col-12">
         <div class="about_company_detail">
           <div class="auth_logo">
-            <h2 class="text-white mb-0 mb-sm-3">QUIZ"em</h2>
+            <h2 class="text-white mb-3">QUIZ"em</h2>
           </div>
           <div class="auth_detail">
             <h4>Fast, Efficient and Productive</h4>
@@ -101,26 +66,19 @@
     </div>
   </div>
 
-
   <!-- Qr code modal -->
   <div class="modal fade qr_modal" id="signqrmodal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered ">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
       <div class="modal-content">
         <div class="modal-header">
-          Use your Game code or Scan QR code
+          Use Camera to Scan QR code
         </div>
         <div class="modal-body">
-          <div class="">
-            <form action="">
-              <div class="input_block">
-                <input type="text" placeholder="Enter your Game code" class="me-4" id="">
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </div>
-              <h6 class="text-center mt-4 mb-0">OR</h6>
-            </form>
-          </div>
           <div class="qr_block text-center">
             <img src="Assets/images/qr-code.png" alt="qr-code">
+            <div class="">
+
+            </div>
           </div>
         </div>
         <div class="modal-footer">

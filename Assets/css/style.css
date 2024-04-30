@@ -94,7 +94,7 @@ input[type="radio"] {
 }
 
 /* Sign In Css */
-.admin_singin_portal {
+.admin_sign_portal {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -102,14 +102,14 @@ input[type="radio"] {
   min-height: 100vh;
 }
 
-.admin_singin_portal .signin_container {
+.admin_sign_portal .sign_container {
   flex: 1 0 auto;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
 }
 
-.singin_wrapper {
+.admin_sign_portal .sign_container .sign_wrapper {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -210,7 +210,7 @@ input[type="radio"] {
   text-decoration: none;
   text-align: right;
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 
 .sign_in_qr{
@@ -233,7 +233,7 @@ input[type="radio"] {
   text-decoration: none;
 }
 
-.signin_image_container {
+.sign_image_container {
   background-image: url(../images/auth-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -265,7 +265,13 @@ input[type="radio"] {
 }
 
 .qr_modal .qr_block>*{
-  min-width: 260px;
+  width: 260px;
+}
+
+.qr_modal .input_block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .modal-header{
