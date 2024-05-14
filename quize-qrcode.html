@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Scan Qr</title>
+
+   <!-- Favicons -->
+   <link href="Assets/images/favicon.svg" rel="icon" type="image/x-icon">
+
+   <!-- Google Fonts -->
+   <link rel="stylesheet" href="assets/css/fonts.css">
+
+   <!-- css Files -->
+   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="assets/css/media.css">
+</head>
+
+<body>
+
+   <div class="quiz-navbar">
+      <img src="Assets/images/brand.png" alt="Brand">
+
+   </div>
+
+   <div class="body-wrapper">
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-md-6 mt-auto">
+               <form action="" class="form_wrapper mx-auto qr_block">
+                  <div class="form_header text-start">
+                     <h3 class="mb-0">Enter Your Quiz Code or Scan QR</h3>
+                  </div>
+                  <div class="input_block">
+                     <input type="text" placeholder="Enter your Quiz code" class="me-4" id="">
+                     <button type="submit" class="btn btn-primary">Enter</button>
+                  </div>
+                  <h6 class="text-center mt-3 mb-2">OR</h6>
+                  <div class="qr_block text-center mb-3">
+                     <img src="Assets/images/qr-code.png" alt="qr-code">
+                  </div>
+                  <h6 class="">User: </h6>
+                  <div class="join_user_block">
+                     <div class="user_block">
+                        <img src="Assets/images/User-join.jpg" alt="user">
+                        <p class="user_name">Yash</p>
+                     </div>
+                     <div class="user_block">
+                        <img src="Assets/images/User-join.jpg" alt="user">
+                        <p class="user_name">Ali</p>
+                     </div>
+                     <div class="user_block">
+                        <img src="Assets/images/User-join.jpg" alt="user">
+                        <p class="user_name">Unurbat</p>
+                     </div>
+                     <div class="user_block">
+                        <img src="Assets/images/User-join.jpg" alt="user">
+                        <p class="user_name">Uday</p>
+                     </div>
+                  </div>
+               </form>
+            </div>
+            <div class="col-md-6">
+               <img src="Assets/images/User-join.jpg" alt="Vector" class="w-100">
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!-- Script -->
+   <script src="assets/js/jquery-3.6.0.min.js"></script>
+   <script src="assets/js/bootstrap.min.js"></script>
+   <script src="assets/js/popper.min.js"></script>
+   <script src="assets/js/script.js"></script>
+
+   <script>
+      $(document).ready(function () {
+
+         $('.toggle-icon').on('click', function () {
+            $(this).closest('.quiz-navbar').siblings("#onboarding_sidebar").toggleClass("active");
+         });
+
+      });
+   </script>
+</body>
+
+</html>
