@@ -16,6 +16,11 @@ $(document).ready(function() {
  
 });
 
+// Loader
+$(window).on('load', function () {
+  $('.loader').css({ "opacity": "0", "visibility": "hidden" });
+});
+
 // owl-carousel
 $('.carousel_slider').owlCarousel({
   loop:false,

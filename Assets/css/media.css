@@ -32,7 +32,7 @@
 }
 @media screen and (max-width: 575px) {
   .result-container .result-title h5{
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
     margin-bottom: 0;
   }
@@ -41,8 +41,34 @@
     font-size: 16px;
   }
   
+  .quiz-container .card .card-header .score{
+    width: 50px;
+  }
+  
   .quiz-container .card .card-body .btn-group label,.quiz-container .card .card-footer h6{
     font-size: 14px;
   }
 
+  .student-page{
+    padding: 10px;
+  }
+
+  .student-page .info-card .line .label{
+    min-width: auto;
+    text-wrap: nowrap;
+    font-size: 14px;
+  }
+  
+  .student-page .info-card .line .value{
+    font-size: 14px;
+  }
+  
+  .student-page .info-card .user-avatar{
+    width: 90px;
+    height: 90px;
+  }
+  
+  .quiz-container .title h2{
+    font-size: 20px;
+  }
 }
