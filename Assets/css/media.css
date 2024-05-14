@@ -4,6 +4,18 @@
   }
 }
 
+@media screen and (max-width: 1199px) {
+  .auth_detail h4 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .quiz-navbar .toggle-icon {
+    display: block;
+  }
+}
+
 @media screen and (max-width: 991px) {
   .admin_sign_portal .sign_container {
     flex-direction: column-reverse;
@@ -17,4 +29,20 @@
   .auth_detail_image {
     display: none;
   }
+}
+@media screen and (max-width: 575px) {
+  .result-container .result-title h5{
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 0;
+  }
+
+  .quiz-container .card .card-title,.quiz-container .card .card-header .score{
+    font-size: 16px;
+  }
+  
+  .quiz-container .card .card-body .btn-group label,.quiz-container .card .card-footer h6{
+    font-size: 14px;
+  }
+
 }
