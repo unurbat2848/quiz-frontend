@@ -27,15 +27,15 @@
     <!-- loader -->
     <div class="loader">
         <div class="cubes">
-        <div class="sk-cube sk-cube1"></div>
-        <div class="sk-cube sk-cube2"></div>
-        <div class="sk-cube sk-cube3"></div>
-        <div class="sk-cube sk-cube4"></div>
-        <div class="sk-cube sk-cube5"></div>
-        <div class="sk-cube sk-cube6"></div>
-        <div class="sk-cube sk-cube7"></div>
-        <div class="sk-cube sk-cube8"></div>
-        <div class="sk-cube sk-cube9"></div>
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
         </div>
     </div>
 
@@ -43,128 +43,160 @@
     <div class="quiz-navbar">
         <img src="Assets/images/brand.png" alt="Brand">
     </div>
-
     <div class="body-wrapper">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <div class="quiz-container">
                         <div class="title">
-                            <h2>MCQ Quiz</h2>
-                            <p> <b>Timer :</b> 15sec</p>
+                            <h2 id="quiz_title">MCQ Quiz</h2>
+                            <p id="quiz_timer"> <b>Timer :</b> 15sec</p>
                         </div>
 
                         <form action="">
-                            <div class="carousel_slider owl-carousel owl-theme">
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h5 class="card-title">1. What is the capital of Australia?</h5>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                                            <input type="radio" class="btn-check" name="btnradio" id="btnradio1"
-                                                autocomplete="off" checked>
-                                            <label class="btn btn-outline-primary" for="btnradio1">Canbera</label>
-    
-                                            <input type="radio" class="btn-check" name="btnradio" id="btnradio2"
-                                                autocomplete="off">
-                                            <label class="btn btn-outline-primary" for="btnradio2">Sydney</label>
-    
-                                            <input type="radio" class="btn-check" name="btnradio" id="btnradio3"
-                                                autocomplete="off">
-                                            <label class="btn btn-outline-primary" for="btnradio3">Melbourne</label>
-    
-                                            <input type="radio" class="btn-check" name="btnradio" id="btnradio4"
-                                                autocomplete="off">
-                                            <label class="btn btn-outline-primary" for="btnradio4">Brisbane</label>
+                            <div class="" id="quiz_body">
+                                <div class="carousel_slider owl-carousel owl-theme">
+                                    <div class="card" id="quiz_container">
+                                        <div class="card-header">
+                                            <h5 class="card-title" id="question_title">1. What is the capital of
+                                                Australia?
+                                            </h5>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h5 class="card-title">2. What is the capital of Australia?</h5>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                                            <input type="checkbox" class="btn-check" name="btncheckbox" id="btncheckbox1"
-                                                autocomplete="off" checked>
-                                            <label class="btn btn-outline-primary" for="btncheckbox1">Canbera</label>
-    
-                                            <input type="checkbox" class="btn-check" name="btncheckbox" id="btncheckbox2"
-                                                autocomplete="off">
-                                            <label class="btn btn-outline-primary" for="btncheckbox2">Sydney</label>
-    
-                                            <input type="checkbox" class="btn-check" name="btncheckbox" id="btncheckbox3"
-                                                autocomplete="off">
-                                            <label class="btn btn-outline-primary" for="btncheckbox3">Melbourne</label>
-    
-                                            <input type="checkbox" class="btn-check" name="btncheckbox" id="btncheckbox4"
-                                                autocomplete="off">
-                                            <label class="btn btn-outline-primary" for="btncheckbox4">Brisbane</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                                        <div class="card-body">
+                                            <div class="btn-group" role="group" id="answer_options">
+                                                <input type="radio" class="btn-check" name="btnradio" id="btnradio1"
+                                                    autocomplete="off" checked>
+                                                <label class="btn btn-outline-primary" for="btnradio1">Canbera</label>
 
-                            <div class="card-btn-grp">
-                                <button type="button" class="btn-primary btn que-btn-prev">Previous</button>
-                                <button type="button" class="btn-primary btn que-btn-next">Next</button>
+                                                <input type="radio" class="btn-check" name="btnradio" id="btnradio2"
+                                                    autocomplete="off">
+                                                <label class="btn btn-outline-primary" for="btnradio2">Sydney</label>
+
+                                                <input type="radio" class="btn-check" name="btnradio" id="btnradio3"
+                                                    autocomplete="off">
+                                                <label class="btn btn-outline-primary" for="btnradio3">Melbourne</label>
+
+                                                <input type="radio" class="btn-check" name="btnradio" id="btnradio4"
+                                                    autocomplete="off">
+                                                <label class="btn btn-outline-primary" for="btnradio4">Brisbane</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="card-btn-grp" id="next_button_container">
+                                    <!--<button type="button" class="btn-primary btn que-btn-prev">Previous</button>-->
+                                    <button type="button" class="btn-primary btn que-btn-next">Next</button>
+                                </div>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
-
-
 
 
     <!-- Script -->
     <script src="assets/js/jquery-3.6.0.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"
+        integrity='sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO'
+        crossorigin='anonymous'></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="Assets/js/owl.carousel.js"></script>
     <script src="assets/js/script.js"></script>
-
     <script>
-        $(document).ready(function(){
-    // Initialize question index
-    let currentQuestion = 0;
-    let totalQuestions = $(".carousel_slider .card").length;
 
-    // Hide all questions except the first one
-    $(".carousel_slider .card").hide();
-    $(".carousel_slider .card:eq(" + currentQuestion + ")").show();
+        var quiz = null;
+        var quiz_result = [];
+        var studentData = JSON.parse(localStorage.getItem("studentData"));
+        const socket = io('ws://localhost:3000');
+        socket.on('start_quiz', (message) => {
+            if (message.status == 'success') {
+                $('.loader').css({ "opacity": "0", "visibility": "hidden" });
+                quiz = message.quiz;
+                $('#quiz_title').text(quiz.title);
+                show_question(0);
+            }
+        });
 
-    // Click event for the "Next" button
-    $(".que-btn-next").click(function(){
-        // Check if it's the last question
-        if(currentQuestion < totalQuestions - 1){
-            // Hide the current question
-            $(".carousel_slider .card:eq(" + currentQuestion + ")").hide();
-            // Show the next question
-            currentQuestion++;
-            $(".carousel_slider .card:eq(" + currentQuestion + ")").show();
-        } else {
-            // If it's the last question, navigate to another page
-            window.location.href = "result.html";
+
+        function checkAnswer(quiz_index, option_index) {
+            var question = quiz.questions[quiz_index];
+            //sending result data
+            var isCorrrect = true;
+            if (question.correctAnswer != option_index) {
+                $("#option_" + option_index).addClass('wrong_answer');
+                isCorrrect = false;
+            }
+            socket.emit('result', { studentId: studentData._id, quizId: quiz._id, questionId: question._id, optionId: question.options[option_index]._id, isCorrect: isCorrrect });
+            $("#option_" + question.correctAnswer).addClass('correct_answer');
+            $(".options").each(function (index) {
+                $(this).prop("onclick", null);
+                $(this).addClass('disable');
+            });
+            $("#next_button").prop("disabled", false);
+
+
+            quiz_result.push(option_index);
         }
-    });
 
-    // Click event for the "Previous" button
-    $(".que-btn-prev").click(function(){
-        // Check if it's the first question
-        if(currentQuestion > 0){
-            // Hide the current question
-            $(".carousel_slider .card:eq(" + currentQuestion + ")").hide();
-            // Show the previous question
-            currentQuestion--;
-            $(".carousel_slider .card:eq(" + currentQuestion + ")").show();
+        function showResult() {
+            var quiz_body = $("#quiz_body");
+            var result_item = '';
+            var correct_answer = '';
+            quiz.questions.forEach(function (question, q_index) {
+                result_item += '<div class="card mb-4">' +
+                    '<div class="card-header">' +
+                    '<h5 class="card-title">' + question.title + '</h5>' +
+                    '<h5 class="score"> 0 / 1</h5>' +
+                    '</div>' +
+                    '<div class="card-body">' +
+                    '<div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">';
+                question.options.forEach(function (option, op_index) {
+                    option_status = '';
+                    if (question.correctAnswer == op_index) {
+                        option_status = 'correct_answer';
+                        correct_answer = option.title;
+                    }
+
+                    if (question.correctAnswer != quiz_result[q_index] && op_index == quiz_result[q_index]) {
+                        option_status = ' wrong_answer';
+                    }
+                    result_item += '<label class="btn btn-outline-primary disable ' + option_status + '" for="btnradio1">' + option.title + '</label>'
+                });
+                result_item += '</div>' +
+                    '</div>' +
+                    '<div class="card-footer">' +
+                    '<h6>Correct Answer: </br>' +
+                    correct_answer + '</br >' +
+                    '   </h6 >' +
+                    '</div ></div>';
+
+            });
+            quiz_body.html(result_item);
         }
-    });
-});
+
+        function show_question(index) {
+            var question = quiz.questions[index];
+            $("#question_title").text(question.title);
+            var answer_options = $("#answer_options");
+            var question_html = '';
+            question.options.forEach(function (option) {
+                question_html += '<label class="btn btn-outline-primary options" id="option_' + option.index + '" for="btnradio1" onclick="checkAnswer(' + index + ',' + option.index + ')">' + option.title + '</label>';
+            });
+            answer_options.html(question_html);
+            if (quiz.questions.length == index + 1) {
+                $("#next_button_container").html('<button type="button" class="btn-primary btn que-btn-next" onclick="showResult()" >Finish</button>');
+            } else {
+                $("#next_button_container").html('<button type="button" class="btn-primary btn que-btn-next" id="next_button" disabled onclick="show_question(' + (index + 1) + ')" >Next</button>');
+            }
+
+
+
+        }
 
     </script>
 </body>

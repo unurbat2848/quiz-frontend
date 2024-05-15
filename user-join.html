@@ -23,15 +23,15 @@
    <!-- loader -->
    <div class="loader">
       <div class="cubes">
-      <div class="sk-cube sk-cube1"></div>
-      <div class="sk-cube sk-cube2"></div>
-      <div class="sk-cube sk-cube3"></div>
-      <div class="sk-cube sk-cube4"></div>
-      <div class="sk-cube sk-cube5"></div>
-      <div class="sk-cube sk-cube6"></div>
-      <div class="sk-cube sk-cube7"></div>
-      <div class="sk-cube sk-cube8"></div>
-      <div class="sk-cube sk-cube9"></div>
+         <div class="sk-cube sk-cube1"></div>
+         <div class="sk-cube sk-cube2"></div>
+         <div class="sk-cube sk-cube3"></div>
+         <div class="sk-cube sk-cube4"></div>
+         <div class="sk-cube sk-cube5"></div>
+         <div class="sk-cube sk-cube6"></div>
+         <div class="sk-cube sk-cube7"></div>
+         <div class="sk-cube sk-cube8"></div>
+         <div class="sk-cube sk-cube9"></div>
       </div>
    </div>
 
@@ -44,22 +44,22 @@
       <div class="container-fluid">
          <div class="row align-items-center">
             <div class="col-md-6">
-               <form action="" class="form_wrapper mx-auto">
+               <form action="" id="messageForm" class="form_wrapper mx-auto">
                   <div class="form_header">
-                    <h3>User Join</h3>
+                     <h3>User Join</h3>
                   </div>
                   <div class="row">
-                    <div class="col-12 form-group">
-                      <input type="email" placeholder="Email" class="form-input" />
-                    </div>
-                    <div class="col-12 form-group">
-                      <input type="text" placeholder="Full Name" class="form-input" />
-                    </div>
-                    <div class="col-12 form-group">
-                      <button type="button" class="btn btn-primary btn-submit w-100">Submit</button>
-                    </div>
+                     <div class="col-12 form-group">
+                        <input type="email" id="email" placeholder="Email" class="form-input" />
+                     </div>
+                     <div class="col-12 form-group">
+                        <input type="text" id="username" placeholder="Full Name" class="form-input" />
+                     </div>
+                     <div class="col-12 form-group">
+                        <button type="submit" class="btn btn-primary btn-submit w-100">Submit</button>
+                     </div>
                   </div>
-                </form>
+               </form>
             </div>
             <div class="col-md-6 text-center p-0">
                <img src="Assets/images/User-join.jpg" alt="Vector" class="w-100">
@@ -73,14 +73,34 @@
    <script src="assets/js/bootstrap.min.js"></script>
    <script src="assets/js/popper.min.js"></script>
    <script src="assets/js/script.js"></script>
-
+   <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"
+      integrity='sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO'
+      crossorigin='anonymous'></script>
    <script>
-      $(document).ready(function () {
-         $('.toggle-icon').on('click', function () {
-            $(this).closest('.quiz-navbar').siblings("#onboarding_sidebar").toggleClass("active");
-         });
+      $('.loader').css({ "opacity": "0", "visibility": "hidden" });
+      const socket = io('ws://localhost:3000');
+      // Handle incoming chat messages
+      socket.on('join', (message) => {
+         if (message.status == 'success') {
+            localStorage.setItem("studentData", JSON.stringify(message.data));
+            window.location.replace("quiziz.html");
+         } else {
+            alert('error');
+         }
+
+      });
+
+      // Handle form submission
+      document.getElementById('messageForm').addEventListener('submit', (e) => {
+         e.preventDefault();
+         const email = document.getElementById('email').value;
+         const username = document.getElementById('username').value;
+         if (email !== '' && username !== '') {
+            socket.emit('join', { email: email, username: username });
+         }
       });
    </script>
+   
 </body>
 
 </html>
