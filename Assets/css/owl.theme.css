@@ -4,7 +4,7 @@
 */
 
 .owl-theme .owl-controls{
-   display: none!important;
+   /*display: none!important;*/
    margin-top: 10px;
    text-align: center;
    }
