@@ -131,7 +131,7 @@
                 $("#option_" + option_index).addClass('wrong_answer');
                 isCorrrect = false;
             }
-            socket.emit('result', { studentId: studentData._id, quizId: quiz._id, questionId: question._id, optionId: question.options[option_index]._id, isCorrect: isCorrrect });
+            socket.emit('save_result', { student: {id: studentData._id, email: studentData.email, username: studentData.username }, quizId: quiz._id, questionId: question._id, optionId: question.options[option_index]._id, isCorrect: isCorrrect });
             $("#option_" + question.correctAnswer).addClass('correct_answer');
             $(".options").each(function (index) {
                 $(this).prop("onclick", null);
